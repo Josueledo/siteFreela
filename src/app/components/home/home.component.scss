@@ -1,0 +1,192 @@
+@import "../../../styles.scss";
+
+.container{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    overflow: hidden;
+    .name_container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 100%;
+        justify-content: start;
+        padding-top: 150px;
+        .hello_button{
+            padding: 10px 20px;
+            background-color: transparent;
+            border-radius: 50px;
+            border: 1px solid black;
+        }
+        span{
+            font-size: 4rem;
+            font-weight: bold;
+            letter-spacing: 3px;
+            color: rgb(22, 22, 22);
+
+            .name{
+                color: tomato;
+            }
+        }
+    }
+    .image_container{
+        overflow: hidden;
+        position: relative;
+        width: 100%;
+        height: 100%;
+        .circle{
+            position: absolute;
+            bottom: -400px;
+            left: calc(50% - 300px);
+            width: 600px;
+            height: 600px;
+            background-color: var(--primary);
+            border-radius: 50%;
+        }
+    }
+    .content_left{
+        padding-left: 50px;
+        width: 25%;
+        position: absolute;
+        left: 0;
+        letter-spacing: 1px;
+        font-weight: 400;
+        color: var(--secondary_font);
+        fa-icon{
+            font-size: 2rem;
+            color: var(--main_font);
+        }
+      p{
+
+      }  
+    }
+    .content_right{
+        padding-right: 50px;
+        position: absolute;
+        right: 0;
+        font-weight: 400;
+        color:var(--secondary_font);
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+        justify-content: end;
+        .icon{
+            display: flex;
+            gap: 10px;
+            fa-icon{
+                font-size: 1.2rem;
+                color:var(--primary);
+            }
+        }
+      span{
+        font-size: 2rem;
+        letter-spacing: 3px;
+        &.years{
+            color: var(--main_font);
+            font-weight: 600;
+        }
+      }  
+      .line{
+        width: 100%;
+        height: 4px;
+        background-color: var(--secondary_font);
+        margin-top: 20px;
+
+      }
+    }
+    .button_container{
+      background-color: var(--background);
+      box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.151);
+      border-radius: 50px;
+      padding: 7px;
+      height: 70px;
+      width: 300px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      position: absolute;
+      bottom: 7vh;
+      button{
+        width: 100%;
+        height: 100%;
+        border-radius: 50px;
+        background-color: transparent;
+        font-weight: bold;
+        &.portifolio{
+            background-color: var(--primary);
+            color: white;
+            border: 1px solid var(--primary);
+        }
+      }
+    }
+}
+
+@media (width <= 1200px) {
+    .container{
+        .content_left{
+            padding-left: 20px;
+            width: 20%;
+            display: none;
+        } 
+        .content_right{
+            display: none;
+            padding-right: 20px;
+        }
+    }
+    
+}
+@media (width <= 650px) {
+    .container{
+        .name_container{
+            span{
+                font-size: 3rem;
+            }
+        }
+
+        .content_left{
+            padding-left: 20px;
+            width: 20%;
+            display: none;
+        } 
+        .content_right{
+            display: none;
+            padding-right: 20px;
+        }
+    }
+    
+}
+@media (width <= 450px) {
+    .container{
+        .name_container{
+            span{
+                font-size: 1.5rem;
+            }
+        }
+
+        .content_left{
+            padding-left: 20px;
+            width: 20%;
+            display: none;
+        } 
+        .content_right{
+            display: none;
+            padding-right: 20px;
+        }
+        .image_container{
+            .circle{
+                width: 400px;
+                height: 400px;
+                bottom: -200px;
+                left: calc(50% - 200px);
+            }
+        }
+        .button_container{
+            width: 250px;
+        }
+    }
+   
+}

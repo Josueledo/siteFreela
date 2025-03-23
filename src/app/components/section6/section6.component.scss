@@ -1,0 +1,109 @@
+@import "../../../styles.scss";
+
+.container{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 60px 40px;
+    background-color: rgb(240, 233, 233);
+    border-radius: 50px;
+    flex-wrap: wrap;
+    gap: 40px;
+    .image_container{
+        width: 500px;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .circle{
+            width: 450px;
+            height: 450px;
+            background-color: var(--primary);
+            border-radius: 50%;
+        }
+    }
+    .content{
+        width: 500px;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        justify-content: center;
+        gap: 20px;
+        h1{
+            letter-spacing: 4px;
+            font-weight: 600;
+            span{
+                color: var(--primary);
+            }
+        }
+        p{
+            color: var(--secondary_font);
+            letter-spacing: 1px;
+            line-height: 30px;
+        }
+
+    }
+    ul{
+        margin-top: 50px;
+        width: 100%;
+        display: flex;
+        list-style: none;
+        align-items: center;
+        justify-content: start;
+        gap: 20px;
+        li{
+            display: flex;
+            align-items: start;
+            flex-direction: column;
+            justify-content: center;
+            span{
+                font-weight: 500;
+                color: var(--secondary_font);
+                font-size: 2rem;
+            }
+            h3{
+                font-weight: 400;
+            }
+        }
+
+    }
+    button{
+        width: 170px;
+        height: 60px;
+        background-color: transparent;
+        color: var(--primary);
+        border: 1px solid var(--primary);
+        border-radius: 50px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        margin-top: 20px;
+    }
+}
+
+@media (width <= 1135px) {
+    .container{
+        .content{
+            text-align: center;
+            align-items: center;
+        }
+        ul{
+            justify-content: center;
+        }
+
+    }
+}
+@media (width <= 780px) {
+    .container{
+        .content{
+            text-align: center;
+            align-items: center;
+        }
+        ul{
+            justify-content: center;
+        }
+
+    }
+}

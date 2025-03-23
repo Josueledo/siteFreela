@@ -28,7 +28,7 @@
             color: rgb(22, 22, 22);
 
             .name{
-                color: tomato;
+                color: var(--primary);
             }
         }
     }
@@ -116,10 +116,21 @@
         border-radius: 50px;
         background-color: transparent;
         font-weight: bold;
+        transition: all .3s;
+        &:hover{
+            background-color: var(--secondary_font);
+            color: var(--white);
+            cursor: pointer;
+        }
         &.portifolio{
             background-color: var(--primary);
             color: white;
             border: 1px solid var(--primary);
+            &:hover{
+                background-color: var(--white);
+                color: var(--primary);
+                cursor: pointer;
+            }
         }
       }
     }

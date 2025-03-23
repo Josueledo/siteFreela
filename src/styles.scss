@@ -4,12 +4,15 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins';
+    scroll-behavior: smooth;
 }
 :root {
-    --primary: tomato;
+    --primary: rgb(240, 78, 49);
+    --primary_light: rgb(252, 178, 165);
     --white:#fff;
     --main_font:rgb(22, 22, 22);
     --secondary_font:rgb(61, 61, 61);
+    --line:rgb(211, 211, 211);
     --background:#f5f5f5;
     --background_secondary: rgb(31, 30, 30);
   }

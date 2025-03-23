@@ -1,0 +1,119 @@
+@import "../../../styles.scss";
+
+.container_footer {
+  width: 100%;
+  height: auto;
+  padding: 40px 30px;
+  padding-bottom: 0;
+  color: var(--black);
+  gap: 20px;
+  .logo {
+    width: 100%;
+    padding: 30px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+  }
+  h1 {
+    font-size: 1.1rem;
+    font-weight: 500;
+    letter-spacing: 10px;
+    color: var(--dark_font); 
+  }
+  .faq {
+    width: 100%;
+    display: flex;
+    height: auto;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+
+    .faq-item {
+      width: 100%;
+      min-height: 80px;
+      max-height: 0px;
+      overflow: hidden;
+      display: flex;
+      align-items: start;
+      justify-content: start;
+      flex-direction: column;
+      border-bottom: 1px solid rgb(211, 211, 211);
+      transition: all 0.2s;
+      padding: 30px 0;
+      user-select: none; /* Impede a seleção */
+      -webkit-user-select: none; /* Safari */
+      -moz-user-select: none; /* Firefox */
+      -ms-user-select: none; /* IE/Edge */
+      a{
+        text-decoration: none;
+        color: var(--black);
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+      }
+      &.active {
+        padding-bottom: 0;
+        max-height: 200px;
+        .faq-answer {
+          max-height: 200px; /* Ajuste para um valor adequado ao seu conteúdo */
+          padding: 30px 0px;
+        }
+      }
+      .faq-question {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        position: relative;
+        align-items: center;
+        cursor: pointer;
+        font-weight: 400;
+        user-select: none; /* Impede a seleção */
+        -webkit-user-select: none; /* Safari */
+        -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* IE/Edge */
+        span{
+          font-size: 2rem;
+          font-weight: lighter;
+        }
+      }
+      .faq-answer {
+        max-height: 0;
+        overflow: hidden;
+        transition: all 0.3s;
+        padding: 0px;
+        font-size: 0.8rem;
+      }
+    }
+  }
+  ul {
+    list-style: none;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 40px;
+    gap: 10px;
+    li {
+      font-size: 0.8rem;
+    }
+  }
+  .assinatura {
+    width: 100%;
+    display: flex;
+    justify-content: end;
+    color: gray;
+    font-size: 0.7rem;
+    padding: 60px 0;
+  }
+}
+@media (width <= 500px) {
+  .container_footer{
+    ul{
+      li{
+        font-size: .6rem;
+      }
+    }
+  }
+}

@@ -28,12 +28,19 @@
             align-items: center;
             justify-content: center;
             gap: 20px;
+            transition: all .3s;
             &.active{
+                transition: all .3s;
                 .icon{
+                    transition: all .3s;
+                    width: 40px;
+                    height: 40px;
                     background-color: var(--primary);
                     border: 1px solid var(--primary);
                     .line{
                         background-color: var(--primary);
+                        left: 18px;
+
                     }
                     &::after{
                         
@@ -41,10 +48,18 @@
                         
                     }
                 }
+                .content{
+
+                    h3{
+                        color: red;
+                    }
+                }
             }
             .icon{
-                width: 40px;
-                height: 40px;
+                transition: all .3s;
+
+                width: 25px;
+                height: 25px;
                 background-color: var(--white);
                 border: 1px solid var(--primary);
                 border-radius: 50%;
@@ -61,11 +76,12 @@
                 }
             }
             .line{
+                transition: all .3s;
                 position: absolute;
                 width: 3px;
                 height: 80px;
                 background-color: var(--line );
-                left: 18px;
+                left: 10px;
                 bottom: -90px;
             }
             .content{
@@ -76,6 +92,8 @@
                 }
                 h3{
                     letter-spacing: 3px;
+                    transition: all .3s;
+
                 }
             }
         }

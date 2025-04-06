@@ -20,6 +20,25 @@
             background-color: transparent;
             border-radius: 50px;
             border: 1px solid black;
+            animation: shake-animation 3s infinite ease-in-out;
+            position: relative;
+        }
+        .lines{
+            display: flex;
+            gap: 5px;
+            position: absolute;
+            left: -10px;
+            top: -10px;
+            rotate: -40deg;
+            align-items: end;
+            .line1, .line2, .line3{
+                width: 2px;
+                height: 10px;
+                background-color: var(--primary);
+            }
+            .line2{
+                height: 15px;
+            }
         }
         span{
             font-size: 4rem;
@@ -32,6 +51,7 @@
             }
         }
     }
+    position: relative;
     .image_container{
         overflow: hidden;
         position: relative;
@@ -73,6 +93,8 @@
         flex-direction: column;
         align-items: end;
         justify-content: end;
+        width: 200px;
+        overflow: hidden;
         .icon{
             display: flex;
             gap: 10px;
@@ -201,3 +223,16 @@
     }
    
 }
+
+
+@keyframes shake-animation {
+    0% { transform: translateX(0); }
+  2% { transform: translateX(-5px); }
+  4% { transform: translateX(5px); }
+  6% { transform: translateX(-5px); }
+  8% { transform: translateX(5px); }
+  10% { transform: translateX(-5px); }
+  12% { transform: translateX(5px); }
+  14% { transform: translateX(0); }
+  100% { transform: translateX(0); }
+  }

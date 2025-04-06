@@ -12,6 +12,7 @@
     flex-wrap: wrap;
     gap: 40px;
     .image_container{
+        overflow: hidden;
         width: 500px;
         height: 100%;
         display: flex;
@@ -97,6 +98,34 @@
 }
 @media (width <= 780px) {
     .container{
+        .image_container{
+            .circle{
+                width: 350px;
+                height: 350px;
+            }
+        }
+        .content{
+            text-align: center;
+            align-items: center;
+        }
+        ul{
+            justify-content: center;
+            li{
+                align-items: center;
+            }
+        }
+
+    }
+}
+@media (width <= 500px) {
+    .container{
+        padding: 60px 20px;
+        .image_container{
+            .circle{
+                width: 250px;
+                height: 250px;
+            }
+        }
         .content{
             text-align: center;
             align-items: center;

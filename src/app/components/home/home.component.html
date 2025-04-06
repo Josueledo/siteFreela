@@ -1,7 +1,15 @@
 <div class="container">
 
-    <div class="name_container">
-        <button class="hello_button">Hello!</button>
+    <div class="name_container" #name>
+        <button class="hello_button">Hello!
+
+            <div class="lines">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </button>
+   
         <span>I'm <span class="name">Josué,</span></span>
         <span>Web Developer</span>
     </div>
@@ -10,12 +18,12 @@
         <img src="" alt="">
         <div class="circle"></div>
     </div>
-    <div class="content_left">
+    <div class="content_left" #item1>
         <fa-icon [icon]="faQuoteLeft"></fa-icon>
 
         <p>Josué's exceptional web developer ensured our website's sucess.<br>Highly recommended!</p>
     </div>
-    <div class="content_right">
+    <div class="content_right" #item2>
         <div class="icon">
             <fa-icon [icon]="faStar"></fa-icon>
             <fa-icon [icon]="faStar"></fa-icon>

@@ -1,5 +1,6 @@
 @import "../../../styles.scss";
-.container{
+
+.container {
     width: 100%;
     min-height: 100vh;
     display: flex;
@@ -7,14 +8,16 @@
     flex-direction: column;
     overflow: hidden;
     position: relative;
-    padding: 60px 4px;
-    .title{
-            font-size: 3rem;
-            font-weight: 400;
-            padding: 60px 40px;
+    padding: 120px 4px;
+
+    .title {
+        font-size: 3rem;
+        font-weight: 400;
+        padding: 0px 40px;
+        padding-bottom: 60px;
     }
 
-    .steps{
+    .steps {
         width: 100%;
         height: 100%;
         display: flex;
@@ -22,40 +25,47 @@
         align-items: center;
         justify-content: center;
         gap: 100px;
-        li{
+
+        li {
             display: flex;
             width: 600px;
             align-items: center;
             justify-content: center;
             gap: 20px;
             transition: all .3s;
-            &.active{
+
+            &.active {
                 transition: all .3s;
-                .icon{
+
+                .icon {
                     transition: all .3s;
                     width: 40px;
                     height: 40px;
                     background-color: var(--primary);
                     border: 1px solid var(--primary);
-                    .line{
+
+                    .line {
                         background-color: var(--primary);
                         left: 18px;
 
                     }
-                    &::after{
-                        
+
+                    &::after {
+
                         background-color: var(--white);
-                        
+
                     }
                 }
-                .content{
 
-                    h3{
+                .content {
+
+                    h3 {
                         color: red;
                     }
                 }
             }
-            .icon{
+
+            .icon {
                 transition: all .3s;
 
                 width: 25px;
@@ -64,7 +74,8 @@
                 border: 1px solid var(--primary);
                 border-radius: 50%;
                 position: relative;
-                &::after{
+
+                &::after {
                     content: "";
                     position: absolute;
                     width: 15px;
@@ -75,22 +86,27 @@
                     top: calc(50% - 7.5px);
                 }
             }
-            .line{
+
+            .line {
                 transition: all .3s;
                 position: absolute;
                 width: 3px;
                 height: 80px;
-                background-color: var(--line );
+                background-color: var(--line);
                 left: 10px;
                 bottom: -90px;
             }
-            .content{
-                line-height: 15px;
-                .step{
+
+            .content {
+                line-height: 20px;
+                width: 300px;
+
+                .step {
                     font-size: .8rem;
                     color: var(--secondary_font);
                 }
-                h3{
+
+                h3 {
                     letter-spacing: 3px;
                     transition: all .3s;
 
@@ -100,16 +116,43 @@
     }
 }
 
-@media (width<= 500px) {
-    .container{
-        .title{
+@media (width<=500px) {
+    .container {
+        .title {
             font-size: 2rem;
         }
-        .steps{
-            li{
-                .content{
-                    h3{
-                        font-size: 1.1rem;
+
+        .steps {
+            li {
+                width: 100%;
+                padding: 0px 20px;
+
+                &.active {
+                    transition: all .3s;
+                    .icon {
+                        transition: all .3s;
+                        width: 35px;
+                        height: 35px;
+                        .line{
+                            left: 15px;
+                        }
+                    }
+                }
+
+                .icon {
+                    min-height: 35px;
+                    min-width: 35px;
+                }
+
+                .line{
+                    left: 15px;
+                    bottom: -100px;
+                }
+                .content {
+                    width: 200px;
+
+                    h3 {
+                        font-size: 1rem;
                     }
                 }
             }

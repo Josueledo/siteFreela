@@ -1,10 +1,10 @@
-import { Component, ElementRef, ViewChild } from '@angular/core';
+import { isPlatformBrowser } from '@angular/common';
+import { Component, ElementRef, Inject, PLATFORM_ID, ViewChild } from '@angular/core';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 
 gsap.registerPlugin(ScrollTrigger);
-gsap.registerPlugin()
 
 @Component({
   selector: 'app-section3',
@@ -18,13 +18,14 @@ export class Section3Component {
  @ViewChild('box2', { static: false }) box2!: ElementRef;
  @ViewChild('box3', { static: false }) box3!: ElementRef;
 
-  constructor() {
-    gsap.registerPlugin()
+  constructor(@Inject(PLATFORM_ID) private plataformId: Object) {
+    gsap.registerPlugin(ScrollTrigger)
 
   }
 
   ngAfterViewInit() {
-    gsap.registerPlugin()
+    gsap.registerPlugin(ScrollTrigger)
+    console.log(this.box.nativeElement)
     this.animation(this.box.nativeElement)
     this.animation(this.box2.nativeElement)
     this.animation(this.box3.nativeElement)
@@ -32,17 +33,19 @@ export class Section3Component {
   }
 
   animation(obj:any){
+    const el = obj;
+    if(isPlatformBrowser(this.plataformId)){
     gsap.to(obj,{
       duration:3,
       scrollTrigger:{
-        trigger:obj,
+        trigger:el,
         start:"top 80%",
         end:"top 0px",
         scrub:true,
-        markers: true,
         toggleClass:"active"
       }
     })
+  }
   }
 
 }

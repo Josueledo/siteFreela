@@ -81,6 +81,13 @@
         font-size: 1.5rem;
         font-weight: bold;
         margin-top: 20px;
+        transition: all .3s;
+        &:hover{
+            background-color: var(--primary);
+            color: var(--white);
+            border: 1px solid var(--white);
+            cursor: pointer;
+        }
     }
 }
 

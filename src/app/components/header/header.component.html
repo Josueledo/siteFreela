@@ -1,0 +1,33 @@
+
+<div class="container" >
+    <div class="logo_container">
+      <h1 class="name"><span class="white">JOSUÉ</span> LEDO</h1>
+    </div>
+  
+    <div class="menu">
+      <li class="item">HOME</li>
+      <li class="item2">ABOUT</li>
+    </div>
+  
+    <div class="start">
+      <button>COMECE AGORA</button>
+    </div>
+    <div class="responsive"  [ngClass]="{ 'active': isActive}">
+        <div class="bars " (click)="menu()">
+          <div class="line line1"></div>
+          <div class="line line2"></div>
+          <div class="line line3"></div>
+        </div>
+      
+    
+        <div class="content">
+          <div class="menu">
+            <li>item1</li>
+            <li>item2</li>
+          </div>
+          <button>COMECE AGORA</button>
+        </div>
+  
+    </div>
+  </div>
+  

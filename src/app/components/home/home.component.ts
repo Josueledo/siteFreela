@@ -12,6 +12,9 @@ import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { isPlatformBrowser } from '@angular/common';
 import { platformBrowser } from '@angular/platform-browser';
+import { ButtonComponent } from '../button/button.component';
+import { HeaderComponent } from '../header/header.component';
+
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -19,7 +22,7 @@ gsap.registerPlugin(ScrollTrigger);
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [FontAwesomeModule, Section2Component, Section3Component, Section4Component, Section5Component, FooterComponent, Section6Component],
+  imports: [FontAwesomeModule, Section2Component, Section3Component, Section4Component, Section5Component, FooterComponent, Section6Component, ButtonComponent,HeaderComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
 })

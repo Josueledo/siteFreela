@@ -44,7 +44,6 @@ export class Section2Component {
           start:"top 90%",
           scrub: 1,
           end:"top 60%",
-          markers:true
         }
       })
   }

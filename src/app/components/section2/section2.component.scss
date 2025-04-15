@@ -57,6 +57,24 @@
         flex-wrap: wrap;
         border-bottom-right-radius: 50px;
         border-bottom-left-radius: 50px;
+        .card1{
+            .image{
+                background: url("/mockup1.png");
+                background-size: cover;
+            }
+        }
+        .card2{
+            .image{
+                background: url("/mockup2.png");
+                background-size: cover;
+            }
+        }
+        .card3{
+            .image{
+                background: url("/mockup4.png");
+                background-size: cover;
+            }
+        }
         .card{
             opacity: 0;
             transform: scale(0);
@@ -127,7 +145,7 @@
                 left: calc(50% - 45%);
                 width: 90%;
                 z-index: 5;
-                background-color: rgb(182, 182, 182);
+                background-color: rgb(209, 209, 209);
             }
             .image3{
                 position: absolute;
@@ -136,7 +154,7 @@
                 left: calc(50% - 40%);
                 z-index: 3;
                 width: 80%;
-                background-color: rgb(146, 146, 146);
+                background-color: rgb(185, 185, 185);
             }
             .button{
                 position: absolute;

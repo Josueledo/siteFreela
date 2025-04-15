@@ -23,13 +23,7 @@ export class HeaderComponent {
   applyTheme() {
 
   }
-  ngOnInit() {
-    this.checkScrollPosition();
-  }
-  ngAfterViewInit(): void {
-    // Aqui você pode configurar um evento de scroll
-    window.addEventListener('scroll', this.checkScrollPosition);
-  }
+
 
   menu() {
     let content = document.querySelector('.content') as HTMLLIElement;

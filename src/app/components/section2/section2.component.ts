@@ -35,17 +35,18 @@ export class Section2Component {
     gsap.registerPlugin(ScrollTrigger)
 
     if(isPlatformBrowser(this.plataformId)){
-    gsap.from(obj,{
-      duration:2,
-      scale:0,
-      opacity: 0,
-      ease: 'power2.out',
-      scrollTrigger:{
-        trigger:obj,
-        start:"top 70%",
-        end:"top 0px",
-      }
-    })
+      gsap.to(obj,{
+        duration:1,
+        opacity: 1,
+        scale:1,
+        scrollTrigger:{
+          trigger:obj,
+          start:"top 90%",
+          scrub: 1,
+          end:"top 60%",
+          markers:true
+        }
+      })
   }
   }
 

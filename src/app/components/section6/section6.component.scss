@@ -18,11 +18,23 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        .circle{
+        .circleBottom{
             width: 450px;
             height: 450px;
             background-color: var(--primary);
             border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            // overflow: hidden;
+            img{
+                width: 102%;
+                border-bottom-left-radius: 50%;
+                border-bottom-right-radius: 50%;
+                box-sizing: content-box;
+                // padding: 10px;
+                transform: translate(0px , -8px);
+            }
         }
     }
     .content{
@@ -124,13 +136,17 @@
 
     }
 }
-@media (width <= 500px) {
+@media (width <= 550px) {
     .container{
         padding: 60px 20px;
         .image_container{
-            .circle{
-                width: 250px;
-                height: 250px;
+            .circleBottom{
+                max-width: 250px;
+                max-height: 250px;
+                img{
+                    transform: translate(0px , -5px);
+                }
+
             }
         }
         .content{

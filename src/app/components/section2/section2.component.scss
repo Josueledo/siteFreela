@@ -58,6 +58,8 @@
         border-bottom-right-radius: 50px;
         border-bottom-left-radius: 50px;
         .card{
+            opacity: 0;
+            transform: scale(0);
             max-width: 350px;
             min-width: 330px;
             width: 400px;
@@ -190,9 +192,12 @@
 }
 @media (width <= 450px) {
     .container{
+        border-top-left-radius: 0;
         .header{
             padding: 20px 20px;
             padding-top: 80px;
+            border-top-left-radius: 0%;
+            border-top-right-radius: 0%;
             li{
                 
                 span{

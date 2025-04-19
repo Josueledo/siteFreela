@@ -1,50 +1,60 @@
 <app-header></app-header>
 <div class="container">
+  <div class="name_container" #name>
+    <button class="hello_button">
+      Hello!
 
-    <div class="name_container" #name>
-        <button class="hello_button">Hello!
+      <div class="lines">
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
+      </div>
+    </button>
 
-            <div class="lines">
-                <div class="line1"></div>
-                <div class="line2"></div>
-                <div class="line3"></div>
-            </div>
-        </button>
-   
-        <span>I'm <span class="name">Josué,</span></span>
-        <span>Web Developer</span>
+    <span>I'm <span class="name">Josué,</span></span>
+    <span>Web Developer</span>
+  </div>
+
+  <div class="image_container">
+    <img src="/eu1.png" alt="josué ledo" />
+    <div class="circle"></div>
+  </div>
+  <div class="content_left" #item1>
+    <fa-icon [icon]="faQuoteLeft"></fa-icon>
+
+    <p>
+      Josué's exceptional web developer ensured our website's sucess.<br />Highly
+      recommended!
+    </p>
+  </div>
+  <div class="content_right" #item2>
+    <div class="icon">
+      <fa-icon [icon]="faStar"></fa-icon>
+      <fa-icon [icon]="faStar"></fa-icon>
+      <fa-icon [icon]="faStar"></fa-icon>
+      <fa-icon [icon]="faStar"></fa-icon>
+      <fa-icon [icon]="faStar"></fa-icon>
     </div>
+    <span class="years">2 Years</span>
+    <span>Experts</span>
+    <div class="line"></div>
+  </div>
 
-    <div class="image_container">
-        <img src="/eu1.png" alt="josué ledo">
-        <div class="circle"></div>
-    </div>
-    <div class="content_left" #item1>
-        <fa-icon [icon]="faQuoteLeft"></fa-icon>
-
-        <p>Josué's exceptional web developer ensured our website's sucess.<br>Highly recommended!</p>
-    </div>
-    <div class="content_right" #item2>
-        <div class="icon">
-            <fa-icon [icon]="faStar"></fa-icon>
-            <fa-icon [icon]="faStar"></fa-icon>
-            <fa-icon [icon]="faStar"></fa-icon>
-            <fa-icon [icon]="faStar"></fa-icon>
-            <fa-icon [icon]="faStar"></fa-icon>
-
-        </div>
-        <span class="years">2 Years</span>
-        <span>Experts</span>
-        <div class="line"></div>
-    </div>
-
-    <div class="button_container">
+  <div class="button_container">
+    <a href="#portifolio">
         <button class="portifolio">Portifólio</button>
-        <button>Hire me</button>
-    </div>
+    </a>
+    <a
+      href="https://wa.me/5533988711659?text=Quero%20fazer%20um%20or%C3%A7amento%21"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <button>Hire me</button>
+    </a>
+  </div>
 </div>
 <app-button></app-button>
-<app-section2></app-section2>
+<app-section2 id="portifolio"></app-section2>
 <app-section3></app-section3>
 <app-section6></app-section6>
 <app-section5></app-section5>

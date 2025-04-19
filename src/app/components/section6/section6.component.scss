@@ -26,14 +26,22 @@
             display: flex;
             align-items: center;
             justify-content: center;
+            position: relative;
             // overflow: hidden;
-            img{
+            .eu{
                 width: 102%;
                 border-bottom-left-radius: 50%;
                 border-bottom-right-radius: 50%;
                 box-sizing: content-box;
                 // padding: 10px;
                 transform: translate(0px , -8px);
+            }
+            .asset{
+                width: 200px;
+                transform: rotate(-50deg);
+                top: -50px;
+                position: absolute;
+                right: 50px;
             }
         }
     }
@@ -144,8 +152,15 @@
             .circleBottom{
                 max-width: 250px;
                 max-height: 250px;
-                img{
+                .eu{
                     transform: translate(0px , -5px);
+                }
+                .asset{
+                    width: 120px;
+                    transform: rotate(-50deg);
+                    top: -30px;
+                    position: absolute;
+                    right: 20px;
                 }
 
             }

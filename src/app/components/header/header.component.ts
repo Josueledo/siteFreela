@@ -1,5 +1,5 @@
-import { CommonModule } from '@angular/common';
-import { Component, Input, OnInit } from '@angular/core';
+import { CommonModule, isPlatformBrowser } from '@angular/common';
+import { Component, Inject, Input, OnInit, PLATFORM_ID } from '@angular/core';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { faCoffee, faBars, faClose, faLightbulb } from '@fortawesome/free-solid-svg-icons';
 
@@ -17,11 +17,25 @@ export class HeaderComponent {
   faClose = faClose
   isActive: boolean = false;
   faLightbulb= faLightbulb
+  scrollHandler = () => this.checkScrollPosition();
 
 
+  constructor(@Inject(PLATFORM_ID) private platformId: Object) {}
 
-  applyTheme() {
-
+  ngAfterViewInit(): void {
+    if (isPlatformBrowser(this.platformId)) {
+      window.addEventListener('scroll', this.scrollHandler);
+    }
+  }
+  
+  ngOnDestroy(): void {
+    if (isPlatformBrowser(this.platformId)) {
+      window.removeEventListener('scroll', this.scrollHandler);
+    }
+  }
+  ngOnInit() {
+    
+    this.checkScrollPosition();
   }
 
 
@@ -51,7 +65,6 @@ export class HeaderComponent {
 
   checkScrollPosition() {
     let container = document.querySelector('.container') as HTMLLIElement;
-
 
 
     if (window.scrollY === 0) {

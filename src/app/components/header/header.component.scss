@@ -100,6 +100,23 @@
       justify-content: center;
       z-index: 9990;
       box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.5);
+      .menu{
+        display: flex;
+        width: 70%;
+        height: 70%;
+        align-items: start;
+        justify-content: start;
+        flex-direction: column;
+        padding: 90px 40px;
+        li{
+          font-size: 2rem;
+          a{
+            color: var(--background_secondary);
+
+          }
+        }
+
+      }
       button{
         position: absolute;
         bottom: 10%;
@@ -181,6 +198,10 @@
       letter-spacing: 10px;
     }
   }
+  a{
+    text-decoration: none;
+    color: var(--white);
+ 
   .start{
     display: flex;
     align-items: center;
@@ -232,11 +253,14 @@
       }
     }
   }
-}
+} }
 
 @media (width <= 1024px) {
   .container{
     .menu{
+      display: none;
+    }
+    .link{
       display: none;
     }
     .start{

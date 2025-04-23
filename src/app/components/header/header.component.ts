@@ -40,6 +40,8 @@ export class HeaderComponent {
 
 
   menu() {
+    if (isPlatformBrowser(this.platformId)) {
+   
     let content = document.querySelector('.content') as HTMLLIElement;
 
     this.isVisible = !this.isVisible;
@@ -61,6 +63,7 @@ export class HeaderComponent {
         content.style.transform = 'skew(0deg)'; // Novo valor de skew após a animação
       }
     });
+  }
   }
 
   checkScrollPosition() {
